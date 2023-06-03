@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    /* Primary */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --Dark-slate-grey: hsl(234, 29%, 20%);
+    --Charcoal-grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Charcoal-grey);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--Dark-slate-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.modal{
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--White);
+    border-radius: 2.3rem;
+    padding: 3.5rem;
+    width: 23rem;
+}
+
+.modal h1{
+    font-size: 3rem;
+}
+
+.mobile-bg{
+    display: none;
+}
+
+main{
+    background-color: var(--White);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 2.3rem;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.sign-up-content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sign-up-content h1{
+    font-size: 3rem;
+}
+
+.sign-up-content ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sign-up-content li{
+    display: flex;
+    gap: 1rem;
+}
+
+.sign-up-form,
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sign-up-form{
+    width: 80%;
+}
+
+.form-group{
+    gap: 10px;
+}
+
+.form-group label{
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message{
+    color: var(--Tomato);
+}
+
+.form-group input{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: var(--Grey) solid 1px;
+
+}
+
+.dismiss-btn,
+.submit-btn{
+    border: none;
+    background-color: var(--Dark-slate-grey);
+    color: var(--White);
+    font-weight: 700;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.dismiss-btn:hover,
+.submit-btn:hover{
+    background-color: var(--Tomato);
+    box-shadow: 1px 5px 10px 1px rgba(255, 99, 71, 0.332);
+}
+
+@media (max-width: 640px){
+
+    .desktop-bg{
+        display: none;
+    }
+
+    .mobile-bg{
+        display: block;
+    }
+
+    main,
+    .modal{
+        min-height: 100vh;
+        min-width: 100%;
+        box-sizing: border-box;
+        border-radius: 0%;
+    }
+
+    main{
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 0;
+    }
+
+    .modal{
+        justify-content: center;
+        padding: 2.5rem;
+    }
+}
